@@ -1,0 +1,96 @@
+HTML
+Ez a lap egy ellenõrzött változatarészletek megjelenítése/elrejtése
+A Wikipédiából, a szabad enciklopédiából
+Jump to navigation
+Jump to search
+HTML
+(HyperText Markup Language)
+Fájlkiterjesztés	.html, .htm
+MIME-típus	text/html
+Fejlesztõ	World Wide Web Consortium & WHATWG
+Formátum típusa	Jelölõnyelv
+Kiterjesztése ennek	SGML
+Kiterjesztése ez	XHTML
+Mac OS típuskód	TEXT
+Uniform	public.html
+Standard	
+
+ISO/IEC 15445
+W3C HTML 4.01
+W3C HTML5 (draft)
+Példa HTML kódra szintaxis kiemelésekkel és sorszámokkal
+
+A HTML (angolul: HyperText Markup Language=hiperszöveges jelölõnyelv) egy leíró nyelv, melyet weboldalak készítéséhez fejlesztettek ki, és mára már internetes szabvánnyá vált a W3C (World Wide Web Consortium) támogatásával. Az aktuális változata az 5, mely az SGML általános jelölõnyelv egy konkrét alkalmazása (azaz minden 5-ös HTML dokumentum egyben az SGML dokumentumszabványnak is meg kell hogy feleljen). Ezt tervek szerint lassan kiszorította volna az XHTML (ami a szintén SGML alapú XML leíró nyelven alapul.
+Tartalomjegyzék
+
+    1 Használata
+    2 Szimbólumok, tartalom
+    3 Felépítés
+        3.1 Karakterkódolás
+            3.1.1 Numerikus karakter referenciák
+            3.1.2 Karakter egyedhivatkozások
+    4 XHTML
+    5 HTML5
+    6 Jegyzetek
+    7 További információk
+    8 Kapcsolódó szócikkek
+
+Használata
+
+HTML általában szöveges állományokban található meg olyan számítógépeken, melyek az internethez kapcsolódnak. Ezek az állományok tartalmazzák azokat a szimbólumokat, amelyek a megjelenítõ programnak leírják, hogyan is kell megjeleníteni illetve feldolgozni az adott állomány tartalmát. Megjelenítõ program lehet egy webböngészõ (angolul: web browser), aural böngészõ (olyan, amelyik a felhasználónak felolvassa a megjelenítendõ szöveget), braille olvasó, amely konvertálja a szöveget braille "formátumba", levelezõ program (mint például: Mozilla Thunderbird, Microsoft Outlook, Eudora stb.), valamint egyéb eszközök, például mobiltelefon.
+Szimbólumok, tartalom
+
+Négyfajta szimbólum (leíró elem) található meg a HTML-ben:
+
+    strukturális elemek, amelyek leírják az adott szöveg "célját" például <h1>Téma 1</h1> mint elsõ szintû címsor (alcím).
+    prezentációs szimbólumok, amelyek leírják, hogy az adott szöveg hogyan nézzen ki: például <b>vastag</b> vastag kinézetet eredményez. (Ez a forma azonban ma már elavultnak számít, helyette a CSS használata javasolt, ugyanis a legújabb irányelv szerint szét kell választani a tartalmat (amit a HTML kódol) és a formát (amit CSS-ben szokás kódolni), és ezáltal mindenki számára elérhetõvé tehetõek a weblapok: felolvasó gépeknek, amit a gyengén látók használnak, szöveges böngészõknek, és nyomtatóbarát verziót is könnyebb készíteni.)
+    hiperszöveg (hypertext) elemek, amelyek segítségével kapcsolat létesíthetõ a dokumentum egyes elemei és más dokumentumok között (például a <a href="https://hu.wikipedia.org/">Wikipedia</a> a Wikipedia szót mint egy kapcsolatot (angol szóval: link) a megadott URL-hez jeleníti meg)
+    eszköz elemek, amelyek segítségével gombok, listák, beviteli mezõk hozhatók létre.
+
+Felépítés
+
+Egy HTML állomány három fõ részre bontható:
+
+    A Dokumentum Típus Definíció az állomány legelején, pl:
+    <!DOCTYPE html>
+    a HTML fejléc <head></head>, ami technikai és dokumentációs adatokat tartalmaz, amelyeket az internet böngészõ nem jelenít meg, tehát átlag felhasználó ezeket nem látja és
+    a HTML törzs <body></body>, amely a megjelenítendõ információkat tartalmazza.
+
+Tehát egy internetes oldal alapszerkezete a következõképpen nézhet ki:
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Az oldal címe</title>
+      <!--esetleges további fejléc-információk-->
+    </head>
+    <body>
+      <p>elsõ bekezdés</p>
+      <p>második bekezdés</p>
+    </body>
+  </html>
+
+Karakterkódolás
+
+Egy HTML dokumentum alapértelmezésként ISO-8859-1, azaz nyugat-európai kódolást használ.[1] Gyakran elõforduló hiba szokott lenni, hogy nincs beállítva a charset paraméter a fejléc content attribútumában, annak ellenére, hogy a dokumentum nem nyugat-európai kódolású szöveget tartalmaz. Magyar nyelvû oldalak esetén ilyenkor gyakran az „õ” és „û” betûk helyett „o” és „u” karaktereket látunk (ekkor valószínûleg "ISO-8859-2" vagy "windows-1250" volna a helyes charset érték), de az is lehet, hogy minden ékezetes betû teljesen olvashatatlanná válik, betûszemetet eredményezve (ha például a megjelenítendõ szöveg UTF-8 kódolású). A charset paraméter értékeként több száz kódolás és érvényes alternatív név (alias) megadható.[2]
+Numerikus karakter referenciák
+
+Akármilyen kódolást használ is egy HTML dokumentum, bármilyen Unicode karakter megjeleníthetõ a szövegben annak UCS kódjával „&#” és „;” jelek között. Például a magyar kis „õ” betû UCS kódja a decimális 337 (vagy hexadecimális 151), ezért függetlenül a használt kódolástól, a HTML dokumentumban elhelyezett &#337; vagy &#x151; mindig az „õ” betût fogja megjeleníteni.
+Karakter egyedhivatkozások
+Searchtool right.svg	Bõvebben: SGML-entitás
+
+Az SGML számos Unicode karakterhez definiál egyedi megnevezéseket,[3][4] azonban a HTML a lehetséges SGML egyedeknek csak egy részét használja[5] (a használt egyedeket a dokumentum DTD-jében kell megadni, és a HTML 4.01-es verziójáig ez nem tartalmazza a közép-európai karaktereket). Emiatt a magyar ékezetes karakterek közül is csak azokra lehetséges SGML egyedhivatkozást megadni, amelyek a nyugat-európai kódkészletben is megtalálhatók. Vagyis hiába definiálja az SGML például „õ” betûhöz az „odblac” nevet, hivatalosan azt egy böngészõnek nem kell tudnia megjeleníteni egy 4.01-es HTML dokumentum esetén.
+
+Az egyedek neveire az „&” és „;” jelek között hivatkozhatunk, így például az &eacute; a kis „é” betût jeleníti meg.
+XHTML
+
+Az XHTML a HTML megfogalmazása XML-ben (a HTML SGML-ben van definiálva). Gyakorlatilag nincs jelentõs eltérés a két nyelv között, csak a formai követelmények lettek szigorúbbak:
+
+    Mindent kisbetûvel kell írni! (kivéve a DOCTYPE elemet)
+    Minden elemet le kell zárni! Az üres elemeket önmagukban egy szóközzel és egy / jellel: <br />.
+    Az elemeket csak egymásba ágyazva lehet használni! <b><i>Szöveg</b></i> helyett: <b><i>szöveg</i></b>
+    A jellemzõket idézõjelek közé írjuk! <table border=1> helyett: <table border="1">
+    A jellemzõknek legyen értéke! <input disabled /> helyett: <input disabled="disabled" />
+
+HTML5
+A HTML5 a következõ, jelentõsen átdolgozott változata a HTML-nek (Hypertext Markup Language), a web fõ jelölõnyelvének. Egyik fõ tervezési célja, hogy a webes alkalmazásokhoz ne legyen szükség pluginek (pl. Adobe Flash, Microsoft Silverlight, Sun JavaFX) telepítésére. A specifikáció a HTML4 és az XHTML1 új verzióját jelenti, a hozzájuk tartozó DOM2 HTML API-val együtt. A HTML5 specifikációban leírt formátumba történõ migráció HTML4-rõl, vagy XHTML1-rõl a legtöbb esetben egyszerû, mivel a visszamenõleges kompatibilitás biztosított. A specifikáció a közeljövõben támogatni fogja a Web Forms 2.0 specifikációt is. HTML5-ben lehetõség van audio és videofájlok beillesztésére, erre a célra külön tagek vannak (<audio>, <video>). Továbbá létezik egy úgynevezett <canvas> tag, mely egy vászon. Erre Javascript segítségével lehet rajzolni, vagy képet beilleszteni. Fontos megemlíteni, hogy a HTML5-bõl kivették az elrendezés megadó tulajdonságokat. Ezeket CSS-ben kell megadni. 

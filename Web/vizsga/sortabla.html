@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="hu">
+<head>
+    <meta charset="utf-8" />
+    <title>Sörtábla</title>
+    <link rel="stylesheet" href="sortabla.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="sortabla.js"></script>
+</head>
+<body>
+    <h1>Sörtábla</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Dátum</td>
+                <td>Aladár</td>
+                <td>Béla</td>
+                <td>Cili</td>
+                <td>Dezső</td>
+                <td>Eleonóra</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="lastLine">
+                <td></td>
+                <td><input class="chkbox" type="checkbox" /></td>
+                <td><input class="chkbox" type="checkbox" /></td>
+                <td><input class="chkbox" type="checkbox" /></td>
+                <td><input class="chkbox" type="checkbox" /></td>
+                <td><input class="chkbox" type="checkbox" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="addRow">Hozzáad</button>
+    <p id="result"></p>
+</body>
+</html>

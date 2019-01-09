@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <title>Henger felszín, térfogat</title>
+  </head>
+  <body id="body">
+    <form id="urlap">
+        <fieldset>
+            <legend>Adja meg a henger sugarát és magasságát!</legend>
+            <div><label for="fahrenheit">r = </label><input type="text" name="radius" id="radius" pattern="[-+]?[0-9]*\.?[0-9]+" required="required" title="lebegőpontos szám" /></div>
+            <div><label for="fahrenheit">h = </label><input type="text" name="height" id="height" pattern="[-+]?[0-9]*\.?[0-9]+" required="required" title="lebegőpontos szám" /></div>
+            <div><label for="celsius">Felszín = </label><input type="text" name="surface" id="surface" title="számolás eredménye" readonly="readonly" /></div>
+            <div><label for="celsius">Téfogat = </label><input type="text" name="volume" id="volume" title="számolás eredménye" readonly="readonly" /></div>
+            <div><input type="submit" value="Számol" id="submit" /></div>
+        </fieldset>
+    </form>
+    <script src="hengerSzamol.js"></script>
+  </body>
+</html>

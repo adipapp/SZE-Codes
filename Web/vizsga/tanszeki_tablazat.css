@@ -1,0 +1,20 @@
+﻿body{
+    font-size:14pt;
+}
+
+a{
+    color:blue;
+}
+
+a:visited{
+    color:gray;
+}
+
+table, th, td{
+    border:1px dotted black;
+    border-collapse:collapse;
+}
+
+thead{
+    font-weight:bold;
+}

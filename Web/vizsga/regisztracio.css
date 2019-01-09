@@ -1,0 +1,14 @@
+﻿div{
+    border:2px groove black;
+    background-color:lightgray;
+    width:300px;
+    margin:30px;
+}
+
+label{
+    font-weight:bold;
+}
+
+a{
+    font-family:'Times New Roman', sans-serif;
+}

@@ -1,0 +1,21 @@
+﻿#image {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+h1{
+    font-size:50px;
+    font-family:sans-serif;
+    font-style:italic;
+    letter-spacing:5px;
+    color:darkblue;
+}
+
+#rendszam{
+    width:200px;
+}
+
+a{
+    font-family:'Times New Roman', serif;
+}

@@ -1,0 +1,18 @@
+﻿h1{
+    font-family:Arial, sans-serif;
+    font-size:32pt;
+    color:blue;
+}
+
+table{
+    text-align:center;
+}
+
+td.red{
+    color:red;
+}
+
+td.green{
+    color:green;
+    font-weight:bold;
+}

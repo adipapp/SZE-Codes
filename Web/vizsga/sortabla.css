@@ -1,0 +1,13 @@
+﻿h1{
+    font-family: Arial, sans-serif;
+    font-variant:small-caps;
+    font-size:16pt;
+}
+
+table{
+    text-align:center;
+}
+
+#result{
+    border:3px dotted red;
+}

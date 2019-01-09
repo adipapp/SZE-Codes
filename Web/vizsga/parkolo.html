@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="hu">
+<head>
+    <meta charset="utf-8" />
+    <title>Parkoló</title>
+    <link rel="stylesheet" href="parkolo.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="parkolo.js"></script>
+</head>
+<body>
+    <img src="parking.gif" id="image" />
+    <h1>Parkolóhely nyilvántartás</h1>
+    <label>Rendszám: <input type="text" id="rendszam" maxlength="6" pattern="[A-Z]{3}[0-9]{3}" /></label>
+    <button id="ok">OK</button>
+    <br />
+    <label>Szabad parkolóhelyek száma: <input type="text" readonly="readonly" value="10" id="szabad"/></label>
+    <p id="eddigi"></p>
+</body>
+</html>

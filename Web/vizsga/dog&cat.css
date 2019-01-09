@@ -1,0 +1,12 @@
+﻿#image{
+    border:3px solid green;
+    width:200px;
+}
+
+li{
+    font-variant:small-caps;
+}
+
+#vizsla{
+    font-weight:bold;
+}

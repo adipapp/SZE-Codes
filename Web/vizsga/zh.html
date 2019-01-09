@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="hu">
+<head>
+    <meta charset="utf-8" />
+    <title>ZH adminisztráció</title>
+    <link rel="stylesheet" href="zh.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="zh.js"></script>
+</head>
+<body>
+    <h1>ZH adminisztráció</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Név</td>
+                <td>Neptun</td>
+                <td>1. ZH</td>
+                <td>1. ZH pót</td>
+                <td>2. ZH</td>
+                <td>2. ZH pót</td>
+                <td>Összesen</td>
+                <td>Aláírás</td>
+                <td>Megajánlott</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text"/></td>
+                <td><input type="text" maxlength="6" pattern="[a-zA-Z0-9]{6}"/></td>
+                <td><input type="number" max="7" min="0" value="0" class="zh1"/></td>
+                <td><input type="number"  max="7" min="0" value="0" class="zh1p"/></td>
+                <td><input type="number"  max="7" min="0" value="0" class="zh2"/></td>
+                <td><input type="number"  max="7" min="0" value="0" class="zh2p"/></td>
+                <td class="ossz"></td>
+                <td class="alairas"></td>
+                <td class="megajanlott"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="add">+</button>
+</body>
+</html>

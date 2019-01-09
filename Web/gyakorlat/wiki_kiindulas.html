@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Wikipedia szócikk</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+  </head>
+  <body>
+    <h1>HTML</h1>
+    <p>A Wikipédiából, a szabad enciklopédiából</p>
+
+    <p>A <acronym title="angolul: HyperText Markup Language=hiperszöveges jelölőnyelv">HTML</acronym> egy leíró nyelv, melyet <a href="http://hu.wikipedia.org/wiki/Weboldal" title="Weboldal">weboldalak</a> készítéséhez fejlesztettek ki, és mára már internetes szabvánnyá vált a <a href="http://hu.wikipedia.org/wiki/W3C" title="W3C">W3C</a> (World Wide Web Consortium) támogatásával. Az aktuális változata a 4.01, mely az <a href="http://hu.wikipedia.org/wiki/SGML"><acronym title="Standard Generalized Markup Language">SGML</acronym></a> általános jelölőnyelv egy konkrét alkalmazása (azaz minden 4.01-es HTML dokumentum egyben az SGML dokumentumszabványnak is meg kell, hogy feleljen). Ezt tervek szerint lassan kiszorította volna az <a href="#xhtml" title="XHTML">XHTML</a> (ami a szintén SGML alapú XML leíró nyelven alapul), de az is lehetséges, hogy a HTML 5 veszi át a helyét.</p>
+
+    <h1>Tartalomjegyzék</h1>
+    <ol>
+      <li><a href="#hasznalata">Használata</a></li>
+      <li><a href="#szimbolumok">Szimbólumok, tartalom</a></li>
+      <li><a href="#felepites">Felépítés</a>
+        <ol>
+          <li><a href="#karakterkodolas">Karakterkódolás</a>
+            <ol>
+              <li><a href="#numerikus">Numerikus karakter referenciák</a></li>
+              <li><a href="#karakter">Karakter egyedhivatkozások</a></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li><a href="#xhtml">XHTML</a></li>
+      <li><a href="#html5">HTML5</a></li>
+      <li><a href="#lasd">Lásd még</a></li>
+    </ol>
+
+    <h1 id="hasznalata">Használata</h1>
+    <p>HTML általában szöveges állományokban található meg olyan számítógépeken, melyek az internethez kapcsolódnak. Ezek az állományok tartalmazzák azokat a szimbólumokat, amelyek a megjelenítő programnak leírják, hogyan is kell megjeleníteni illetve feldolgozni az adott állomány tartalmát. Megjelenítő program lehet egy <em>webböngésző</em> (angolul: web browser), <em>aural böngésző</em> (olyan, amelyik a felhasználónak felolvassa a megjelenítendő szöveget), <em>braille olvasó</em>, amely konvertálja a szöveget braille "formátumba", <em>levelező program</em> (mint például: <samp>Mozilla Thunderbird</samp>, <samp>Microsoft Outlook</samp>, <samp>Eudora</samp> stb.), valamint <em>egyéb eszközök</em>, például <samp>mobiltelefon</samp>.</p>
+
+    <h1 id="szimbolumok">Szimbólumok, tartalom</h1>
+    <p>Négyfajta szimbólum (leíró elem) található meg a HTML-ben:</p>
+    <ul>
+      <li><em>strukturális</em> elemek, amelyek leírják az adott szöveg "célját" például <code>&lt;h1&gt;Téma 1&lt;/h1&gt;</code> mint első szintű címsor (alcím).</li>
+      <li><em>prezentációs</em> szimbólumok, amelyek leírják, hogy az adott szöveg hogyan nézzen ki: például <code>&lt;b&gt;vastag&lt;/b&gt;</code> <b>vastag</b> kinézetet eredményez. (Ez a forma azonban ma már elavultnak számít, helyette a CSS használata javasolt, ugyanis a legújabb irányelv szerint szét kell választani a tartalmat (amit a HTML kódol) és a formát (amit CSS-ben szokás kódolni), és ezáltal mindenki számára elérhetővé tehetőek a weblapok: felolvasó gépeknek, amit a gyengén látók használnak, szöveges böngészőknek, és nyomtatóbarát verziót is könnyebb készíteni.)</li>
+      <li><em>hiperszöveg</em> (hypertext) elemek, amelyek segítségével kapcsolat létesíthető a dokumentum egyes elemei és más dokumentumok között (például a <code>&lt;a href="http://hu.wikipedia.org/"&gt;Wikipedia&lt;/a&gt;</code> a <a href="http://hu.wikipedia.org/">Wikipedia</a> szót mint egy kapcsolatot (angol szóval: link) a megadott URL-hez jeleníti meg)</li>
+      <li><em>eszköz</em> elemek, amelyek segítségével gombok, listák, beviteli mezők hozhatók létre.</li>
+    </ul>
+    
+    <h1 id="felepites">Felépítés</h1>
+    <p>Egy HTML állomány három fő részre bontható:</p>
+    <ol>
+      <li>A Dokumentum Típus Definíció az állomány legelején, ami a használni kívánt DTD-t adja meg, pl:
+      <pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</pre></li>
+      <li>a HTML fejléc <code>&lt;head&gt;</code>, ami technikai és dokumentációs adatokat tartalmaz, amelyeket az internet böngésző nem jelenít meg, tehát átlag felhasználó ezeket nem látja és</li>
+      <li>a HTML törzs <code>&lt;body&gt;</code>, amely a megjelenítendő információkat tartalmazza.</li>
+    </ol>
+    <p>Tehát egy internetes oldal alapszerkezete a következőképpen nézhet ki:</p>
+    <pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Az oldal címe&lt;/title&gt;
+    &lt;meta http-equiv="Content-type" content="text/html;charset=iso-8859-2"&gt;
+    [esetleges további fejléc-információk]
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt; első bekezdés &lt;/p&gt;
+    &lt;p&gt; második bekezdés &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <h2 id="karakterkodolas">Karakterkódolás</h2>
+    <p>Egy HTML dokumentum alapértelmezésként ISO-8859-1, azaz nyugat-európai kódolást használ.<sup>[1]</sup> Gyakran előforduló hiba szokott lenni, hogy nincs beállítva a charset paraméter a fejléc content attribútumában, annak ellenére, hogy a dokumentum nem nyugat-európai kódolású szöveget tartalmaz. Magyar nyelvű oldalak esetén ilyenkor gyakran az „ő” és „ű” betűk helyett „õ” és „û” karaktereket látunk (ekkor valószínűleg "ISO-8859-2" vagy "windows-1251" volna a helyes charset érték), de az is lehet, hogy minden ékezetes betű teljesen olvashatatlanná válik (ha például a megjelenítendő szöveg UTF-8 kódolású). A charset paraméter értékeként több száz kódolás és érvényes alternatív név (alias) megadható.<sup>[2]</sup></p>
+
+    <h3 id="numerikus">Numerikus karakter referenciák</h3>
+    <p>Akármilyen kódolást használ is egy HTML dokumentum, bármilyen Unicode karakter megjeleníthető a szövegben annak UCS kódjával „&amp;#” és „;” jelek között. Például a magyar kis „ő” betű UCS kódja a decimális 337 (vagy hexadecimális 151), ezért függetlenül a használt kódolástól, a HTML dokumentumban elhelyezett &amp;#337; vagy &amp;#x151; mindig az „ő” betűt fogja megjeleníteni.</p>
+
+    <h3 id="karakter">Karakter egyedhivatkozások</h3>
+    <p>Az SGML számos Unicode karakterhez definiál egyedi megnevekzéseket,<sup>[3][4]</sup> azonban a HTML a lehetséges SGML egyedeknek csak egy részét használja<sup>[5]</sup> (a használt egyedeket a dokumentum DTD-jében kell megadni, és a HTML 4.01-es verziójáig ez nem tartalmazza a közép-európai karaktereket). Emiatt a magyar ékezetes karakterek közül is csak azokra lehetséges SGML egyedhivatkozást megadni, amelyek a nyugat-európai kódkészletben is megtalálhatók. Vagyis hiába definiálja az SGML például „ő” betűhöz az „odblac” nevet, hivatalosan azt egy böngészőnek nem kell tudnia megjeleníteni egy 4.01-es HTML dokumentum esetén.</p>
+    <p>Az egyedek neveire az „&amp;” és „;” jelek között hivatkozhatunk, így például az &amp;eacute; a kis „é” betűt jeleníti meg.</p>
+
+    <h1 id="xhtml">XHTML</h1>
+    <p>Az XHTML a HTML megfogalmazása XML-ben (a HTML SGML-ben van definiálva). Gyakorlatilag nincs jelentős eltérés a két nyelv között, csak a formai követelmények lettek szigorúbbak:</p>
+    <ul>
+      <li>Mindent kisbetűvel kell írni! (kivéve a DOCTYPE elemet)</li>
+      <li>Minden elemet le kell zárni! Az üres elemeket önmagukban egy szóközzel és egy / jellel: <code>&lt;br /&gt;</code>.</li>
+      <li>Az elemeket csak egymásba ágyazva lehet használni! <del><code>&lt;b&gt;&lt;i&gt;Szöveg&lt;/b&gt;&lt;/i&gt;</code></del> helyett: <ins><code>&lt;b&gt;&lt;i&gt;szöveg&lt;/i&gt;&lt;/b&gt;</code></ins></li>
+      <li>A jellemzőket idézőjelek közé írjuk! <del><code>&lt;table border=1&gt;</code></del> helyett: <ins><code>&lt;table border="1"&gt;</code></ins></li>
+      <li>A jellemzőknek legyen értéke! <del><code>&lt;input disabled /&gt;</code></del> helyett: <ins><code>&lt;input disabled="disabled" /&gt;</code></ins></li>
+    </ul>
+  </body>
+</html>
