@@ -1,0 +1,13 @@
+this egy pointer c++-ban!!!!
+láthatóság osztályon belül: public: !!! több osztálytagra is vonatkozhat egy access modifier
+kostruktor definíciónál ha nem akarunk különbözõ paraméterazonosítókat mint az osztálytagok akkor this
+default fgv paraméter értéket adhatunk meg a fgv fejében, ha ezt tesszük akkor azt a p-t nem kötelezõ megadni a híváskor(C-ben nincs ilyen)
+	ha egy paraméternek adtunk default értéket akkor az összesnek kell
+	csak egy helyen lehet default p-t megadni, a conflictok elkerülése miatt
+konstruktornál saját adattag beállítása (....) : x(x), többnél a sorrend felcserélése warningol (ez nem azonos feltétlenül a this-> -el)
+this-nél elõször inicializál midndent és utána bemásol, a felsõnél meg egyik-másik módon
+konstans tagfgv nem módosíthatja a saját adattagjait
+	konstans osztálynak  csak a konstans tagfgv-eit hívhatjuk meg(const foglalt szó paramlista után írandó)
+	konstans objektumot csak konstasként lehet átadni ha nem érték szerint adjuk át
+
+

@@ -1,0 +1,19 @@
+õsosztály típ. pointer mutat egy gyerekosztáy típ. obj-ra
+ha meg akarom szüntetni ezt a pointert delete-el, akkor alapból az õsosztály destruktora hívódik meg
+ez csak az õsosztály foglalásait tudja felszabadítani a gyerekét NEM!!!
+	ezért minden ilyen esetben kell VIRTUÁLIS DESTRUKTOR a gyerekeknek akkor is ha nem csinál semmit!
+
+----------------------------------
+Operátorok
+operátor overriding
+2 paraméterû operátor külsõ fgv-ként
+VAGY 1 operand. belsõként, csak akkor ha az elsõ paraméter az saját osztály
+
+friend kulcsszó: egy baráti külsõ fgv megadása, ami hozzáférhet private tagokhoz is
+
+pl.
+class point, rectangle, circle stb...
+	pure virtual contains(point)
+konstruktorok
+hány objektum fedi az adott pontot
+plot fgv ami adott területû részt karakteres plottol ki

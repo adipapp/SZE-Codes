@@ -1,0 +1,36 @@
+Containerek
+-----------------------
+vector -> dinaminkusan újraméretezhetõ tömb
+vectot<int> ize;
+ize[3] - meg kell gyõzõdni arról hogy nem címzünk ki, VAGY ize.at(3) - biztonságosabb
+
+list -> kétirányba láncolt lista, nem random elérésû
+folyamatos elembeszúrásoknál mindig ugyanannyi idõ kell, vectornál újrainicializáláskor megugró idõ
+insert listánál sokkal hatékonyabb, mert nem másolja arrébb az elemeket
+iterátor(okos pointer...), begin()-tõl end()-ig bejárni for ciklussal a listát/vectort(++it érdemes, gyorsabb)
+fordított bejárás esetén: rbegin() és rend()
+const fgv-ben const_iterator
+
+map -> asszociatív tömb/dictionary
+törlés lassú, mert bináris keresõfát épít az adatokból a háttérben
+iterátorának 2 elérése van: it->first: kulcsot adja vissza, it->second: az értéket adja vissza
+kulcs csak olyan érték lehet aminél definiálva van a < és = operátor(vagy saját operátor)
+
+Copy konstruktor
+------------------------
+klónoz egy másik, azonos típusú objektumot
+alapból egy objektum érték szerint adódik át -> default copy konstruktor
+DE: ha pointert tartalmaz az objektum, akkor az ugyanoda fog mutatni(vagy destruktor hívásakor azt is felszabítja amit nem kellene)
+Hallgato(const Hallgato& other) {...}
+ha van valamilyen dinamikus adattagunk és írunk hozzá destruktort -->> akkor kell copy konstruktor
+DE: ha dinamikus container(!!) objektumaink vannak benne, akkor az õ copy konstruktorai(vagy törléskor destruktorai) is meghívódnak, ilyenkor már minden rendben :)
+
+Virtualitás
+-----------------------
+szülõ osztály típusa kompatibilis lefelé a gyerekeivel is
+virtuális kódtagok származtatáskor az "aktuális" gyereké hívódnak meg
+virtual void Ize(...) = 0; -> pure virtual, nincs definíciója
+azt az osztályt nem lehet példányosítani aminek pure virtual fgv-e van -> absztrakt osztályok(lehetnek neki akár nem pure virtual fgv-ei is)
+kötelezõen elõírja hogy a belõle származtatott osztályokban ezt a fgv-t definiálni kell
+
+mutable -> olyan adattag amit nem baj ha módosít egy konstans fgv

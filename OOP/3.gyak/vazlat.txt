@@ -1,0 +1,15 @@
+protected-es ill. private-os származtatás esetén ez az örökölt tagok láthatósági szintjét is módosítja/korlátozza
+
+Adattag típusa			Öröklõdés típusa
+			public		protected	private
+__________________________________________________________________
+public			public		protected	private	
+protected		protected	protected	private		
+private				------über-private------(ott van csak nem nyúlhatok hozzá-egy prot/pub függvény még hívhatja)
+
+statikus adattagok: osztályonként jön létre egy, nem objektumonként
+.cpp-ben kezdõértéket adni neki(oda már nem szabad static kulcsszót írni!)
+
+statikus fgv az osztály példányosítása nélkül is használható, csak statikus adattagokat érhet el
+
+.svg formátumba vektorgrafikus képek készítése c++-ban

@@ -1,0 +1,9 @@
+compiler-linker
+fgv definíció-deklaráció
+struktúra láncolt listába-2
+header fájlok-csak deklaráció, külön cppbe a definíció
+struktúrába fgv def, így nem kell paraméterlista
+pointer ref szerinti átadása
+valgrind vs-ben
+main.ii,.s,.o -> comp.; linker->a.out
+header guard-ok adott .h fájlokba: ifndef, define, endif

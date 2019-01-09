@@ -1,0 +1,90 @@
+## 1.gyak
+
+compiler-linker
+fgv definíció-deklaráció
+struktúra láncolt listába-2
+header fájlok-csak deklaráció, külön cppbe a definíció
+struktúrába fgv def, így nem kell paraméterlista
+pointer ref szerinti átadása
+valgrind vs-ben
+main.ii,.s,.o -> comp.; linker->a.out
+header guard-ok adott .h fájlokba: ifndef, define, endif
+
+## 2.gyak
+
+this egy pointer c++-ban!!!!
+láthatóság osztályon belül: public: !!! több osztálytagra is vonatkozhat egy access modifier
+kostruktor definíciónál ha nem akarunk különbözõ paraméterazonosítókat mint az osztálytagok akkor this
+default fgv paraméter értéket adhatunk meg a fgv fejében, ha ezt tesszük akkor azt a p-t nem kötelezõ megadni a híváskor(C-ben nincs ilyen)
+	ha egy paraméternek adtunk default értéket akkor az összesnek kell
+	csak egy helyen lehet default p-t megadni, a conflictok elkerülése miatt
+konstruktornál saját adattag beállítása (....) : x(x), többnél a sorrend felcserélése warningol (ez nem azonos feltétlenül a this-> -el)
+this-nél elõször inicializál mindent és utána bemásol, a felsõnél meg egyik-másik módon
+konstans tagfgv nem módosíthatja a saját adattagjait
+	konstans osztálynak  csak a konstans tagfgv-eit hívhatjuk meg(const foglalt szó paramlista után írandó)
+	konstans objektumot csak konstasként lehet átadni ha nem érték szerint adjuk át
+
+## 3.gyak
+
+protected-es ill. private-os származtatás esetén ez az örökölt tagok láthatósági szintjét is módosítja/korlátozza
+
+Adattag típusa			Öröklõdés típusa
+			public		protected	private
+__________________________________________________________________
+public			public		protected	private	
+protected		protected	protected	private		
+private				------über-private------(ott van csak nem nyúlhatok hozzá-egy prot/pub függvény még hívhatja)
+
+statikus adattagok: osztályonként jön létre egy, nem objektumonként
+.cpp-ben kezdõértéket adni neki(oda már nem szabad static kulcsszót írni!)
+
+statikus fgv az osztály példányosítása nélkül is használható, csak statikus adattagokat érhet el
+
+.svg formátumba vektorgrafikus képek készítése c++-ban
+
+## 4.gyak
+
+Na itt nem voltam, ez volt az amit a konzultációs alkalommal elkezdtek, a Facebook-os dolog.
+Az új dolgok benne: tamplate ostályok, cerr használatat cout helyett bizonyos esetekben
+
+## 6.gyak
+
+Containerek
+-----------------------
+vector -> dinaminkusan újraméretezhetõ tömb
+vectot<int> ize;
+ize[3] - meg kell gyõzõdni arról hogy nem címzünk ki, VAGY ize.at(3) - biztonságosabb
+
+list -> kétirányba láncolt lista, nem random elérésû
+folyamatos elembeszúrásoknál mindig ugyanannyi idõ kell, vectornál újrainicializáláskor megugró idõ
+insert listánál sokkal hatékonyabb, mert nem másolja arrébb az elemeket
+iterátor(okos pointer...), begin()-tõl end()-ig bejárni for ciklussal a listát/vectort(++it érdemes, gyorsabb)
+fordított bejárás esetén: rbegin() és rend()
+const fgv-ben const_iterator
+
+map -> asszociatív tömb/dictionary
+törlés lassú, mert bináris keresõfát épít az adatokból a háttérben
+iterátorának 2 elérése van: it->first: kulcsot adja vissza, it->second: az értéket adja vissza
+kulcs csak olyan érték lehet aminél definiálva van a < és = operátor(vagy saját operátor)
+
+Copy konstruktor
+------------------------
+klónoz egy másik, azonos típusú objektumot
+alapból egy objektum érték szerint adódik át -> default copy konstruktor
+DE: ha pointert tartalmaz az objektum, akkor az ugyanoda fog mutatni(vagy destruktor hívásakor azt is felszabítja amit nem kellene)
+Hallgato(const Hallgato& other) {...}
+ha van valamilyen dinamikus adattagunk és írunk hozzá destruktort -->> akkor kell copy konstruktor
+DE: ha dinamikus container(!!) objektumaink vannak benne, akkor az õ copy konstruktorai(vagy törléskor destruktorai) is meghívódnak, ilyenkor már minden rendben :)
+
+Virtualitás
+-----------------------
+szülõ osztály típusa kompatibilis lefelé a gyerekeivel is
+virtuális kódtagok származtatáskor az "aktuális" gyereké hívódnak meg
+virtual void Ize(...) = 0; -> pure virtual, nincs definíciója
+azt az osztályt nem lehet példányosítani aminek pure virtual fgv-e van -> absztrakt osztályok(lehetnek neki akár nem pure virtual fgv-ei is)
+kötelezõen elõírja hogy a belõle származtatott osztályokban ezt a fgv-t definiálni kell
+
+mutable -> olyan adattag amit nem baj ha módosít egy konstans fgv
+
+## 7.gyak
+

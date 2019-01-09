@@ -1,0 +1,10 @@
+TODO:
+
+1) List.hpp -> std::list<>
+2) Posts + id(int): txt update, Post.hpp id, beolvasás
+3) PostList -> PostManager(print nélkül, list<Post> getBy(string Authorname)) : View(megjeleníti)
+4) FancyView, HtmlView
+5) printBy(list<string> Authors)
+6) SharedPost
+
+const, ref
