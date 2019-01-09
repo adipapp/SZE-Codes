@@ -1,0 +1,39 @@
+﻿h1{
+    margin-bottom:1cm;
+}
+
+form {
+    width: 15cm;
+}
+
+input[type=text], select {
+    width: 9cm;
+    float: right;
+}
+
+input[type=number]{
+    width:1cm;
+    float:right;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
+ol::line-marker{
+    list-style:decimal;
+    width:1cm;
+}
+
+textarea{
+    width:14.5cm;
+    left:0.5cm;
+}
+
+ol{
+    padding-left:0.8em;
+}

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="hu">
+<head>
+    <meta charset="utf-8" />
+    <title>Szakdolgozat értékelő lap</title>
+    <link rel="stylesheet" href="szakdoga.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="szakdoga.js"></script>
+</head>
+<body>
+    <h1>Szakdolgozat értékelő lap</h1>
+    <form>
+        <p><label class="left">Szerző (jelölt):</label><input type="text" /></p><br />
+        <p><label class="left">Szak:</label><input type="text" list="szakok" /> <datalist id="szakok"><option>Mérnökinformatikus</option><option>Gazdaságinformatikus</option></datalist></p><br />
+        <p><label class="left">Képzési szint:</label><select><option>Bsc</option><option>MSc</option></select></p><br />
+        <p><label class="left">A szakdolgozat címe:</label><input type="text" /></p><br />
+        <p><label class="left">A bíráló neve:</label><input type="text" /></p><br />
+        <p><label class="left">Munkahelye:</label><input type="text" /></p><br />
+        <p><label class="left">Beosztása:</label><input type="text" /></p><br />
+        <ol>
+            <li>
+                Témaválasztás
+                <label class="right">Pontszám: <input type="number" min="0" max="5"  value="0"/></label>
+                <textarea></textarea>
+            </li>
+            <li>
+                A dolgozat szerkezete, stílusa
+                <label class="right">Pontszám: <input type="number" min="0" max="8"  value="0"/></label>
+                <textarea></textarea>
+            </li>
+            <li>
+                Szakirodalom feldolgozása
+                <label class="right">Pontszám: <input type="number" min="0" max="10"  value="0"/></label>
+                <textarea></textarea>
+            </li>
+            <li>
+                A téma kidolgozásának színvonala
+                <label class="right">Pontszám: <input type="number" min="0" max="20" value="0"/></label>
+                <textarea></textarea>
+            </li>
+            <li>
+                A dolgozat gyakorlati vonatkozása
+                <label class="right">Pontszám: <input type="number" min="0" max="7"  value="0"/></label>
+                <textarea></textarea>
+            </li>
+        </ol>
+        <p>Összpontszám: <label id="osszpont">0</label>, érdemjegy: <label id="jegy">elégtelen (1)</label></p>
+    </form>
+</body>
+</html>
