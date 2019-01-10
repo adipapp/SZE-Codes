@@ -1,13 +1,17 @@
 # SZE-Codes
 
-Üdv Mindenkinek!
+Ãœdv Mindenkinek!
 
-Itt megtalálhatók néhány SZE mérnökinfós tárgy során, az általam korábban írt kódok. Ezek között vannak a gyakorlatok során írt példák, vizsgagyakorlások, megoldott vizsgafeladatok és egyebek.
-Ennek a repo-nak az a célja, hogy mindenki számára hozzáférhetõek legyenek ezek a fájlok, ahelyett hogy csak õrzöm õket magamnak a gépemen vagy egyszerûen eltûnjenek a süllyesztõben.
-Így a tárgyaitokra való készüléskor talán ér valamit és valamiféle hasznát tudjátok venni.
+Itt megtalÃ¡lhatÃ³ak az Ã¡ltalam korÃ¡bban Ã­rt kÃ³dok nÃ©hÃ¡ny SZE mÃ©rnÃ¶kinfÃ³s/gazdinfÃ³s tÃ¡rgyhoz.
 
-A repo anyaga új tárgyakkal és kódokkal folyamatokan bõvülni fog, annak függvényében, hogy én is hogy veszem fel/végzem ezeket a tárgyakat.
+Ezek kÃ¶zÃ¶tt vannak a gyakorlatok sorÃ¡n Ã­rt pÃ©ldÃ¡k, vizsgagyakorlÃ¡sok, megoldott vizsgafeladatok Ã©s egyebek.
 
-Sok sikert a készüléshez és minden jót!
+Ennek a repo-nak az a cÃ©lja, hogy mindenki szÃ¡mÃ¡ra hozzÃ¡fÃ©rhetÅ‘ek legyenek ezek a fÃ¡jlok ahelyett, hogy csak Å‘rzÃ¶m Å‘ket a gÃ©pemen vagy egyszerÅ±en eltÅ±njenek a sÃ¼llyesztÅ‘ben.
 
-Ádám
+Ãgy a tÃ¡rgyaitokra valÃ³ kÃ©szÃ¼lÃ©skor talÃ¡n Ã©r valamit Ã©s valamifÃ©le hasznÃ¡t tudjÃ¡tok venni.
+
+A repo anyaga vÃ¡rhatÃ³an bÅ‘vÃ¼lni fog Ãºj tÃ¡rgyakkal Ã©s hozzÃ¡ tartozÃ³ kÃ³dokkal.
+
+Sok sikert a kÃ©szÃ¼lÃ©shez Ã©s minden jÃ³t!
+
+_**ÃdÃ¡m**_
