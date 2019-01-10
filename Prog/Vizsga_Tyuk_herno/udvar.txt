@@ -1,0 +1,4 @@
+tyuk	11 db
+pulyka	6 db
+kacsa	19 db
+kakas	3 db

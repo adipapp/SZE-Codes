@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta charset="utf-8" />
+</head>
+<body style="background-color:steelblue;font-family:Algerian;">
+    <h1>First Heading</h1>
+    <h2>Second Heading</h2>
+    <h3>Third Heading</h3>          
+    <h6>Sixth Heading</h6> 
+    
+    <p style="text-align:right">First Paragraph</p>
+    <hr />
+    <p>Second Paragraph<br>Second Line</p>
+    <pre style="font-size:large;font-family:Batang;color:coral;font-style:oblique">
+    </pre>
+    <a href="http://www.w3schools.com">This is a link</a>
+    <img src="2016-01-16.PNG" alt="Ulesrend 11.B" width="100" height="200" title="UlEsrend 11.B"/>
+
+
+</body>
+</html>

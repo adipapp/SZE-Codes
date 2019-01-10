@@ -1,0 +1,8 @@
+Monopoly;             3;  6; 0
+Catan telepesei;      2;  4; 3
+Agricola;             2;  5; 15
+Forestaurant;         1;  5; 4
+51st state;           1;  4; 3
+Jungle speed          2; 10; 42
+Bang!                 4;  7; 18
+Battlestar Galactica  3;  6; 10

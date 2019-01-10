@@ -1,0 +1,58 @@
+a	egy
+an	egy
+imperative	parancsolo
+procedural	ugyrendi
+language	nyelv
+it	ez
+was	volt
+designed	tervezett
+compiled	osszeallitott
+using	segitsegevel
+relatively	viszonylag
+straightforward	egyertelmu
+compiler	forditoprogram
+provide	biztositani
+low-level	alacsony szint
+access	hozzaferes
+memory	memoria
+map	terkep
+efficiently	eredmenyesen
+machine	gep
+instructions	utasitasok
+constructs	konstrukciok
+and	es
+require	kivan
+minimal	minimalis
+run-time	futasideju
+support	tamogatas
+therefore	ebbol adodoan
+useful	hasznos
+many	sok
+formerly	korabban
+coded	kodolt
+assembly	osszeszereles
+example	pelda
+system	rendszer
+programming	programozas
+despite	annak ellenere
+capabilities	kepessegek
+encourage	osztonzese
+cross-platform	kereszt emelveny
+standards-compliant	szabvanyoknak megfelelo
+portably	hordozhatoan
+written	irott
+very	nagyon
+wide	szeles
+variety	fajta
+computer	szamitogep
+platforms	allvanyok
+operating	uzemeltetesi
+few	keves
+source	forras
+become	valik
+available	elerhetõ
+range	hatotavolsag
+embedded	beagyazott
+microcontrollers	mikrokontrollerek
+supercomputers	szuperszamitogepek
+

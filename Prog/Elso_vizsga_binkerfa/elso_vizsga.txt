@@ -1,0 +1,9 @@
+Nekünk bemenetrõl szavakat kellet abc sorrendben binaris fában tárolni.
+Ismételt bekérés végjelig, vagy egy bemenetet kért és szóköztõl szóközig számolt.
+Csak a betûkarakterek számítottak a szó részének. Persze ki is kellett írni.
+
++1 jelöljük csillag a fában azokat a szavakat amik "tükörszavak" (pl "arra").
+	Na ezt megint nem tudtam, hogy értsem, én egy char változót írtam '*'-ra a struktúrán belül.
++1 ha egy szó többször szerepel, akkor írjuk ki csak egyszer,
+	 valamint mellé számmal, hogy hányszor van benne.
++1 bekért nevû fájlba való kiíratás volt.

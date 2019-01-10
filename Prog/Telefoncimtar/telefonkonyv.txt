@@ -1,0 +1,4 @@
+301234567 9023 Gyor, Pelda u. 8.
+701231234 9022 Gyor, Pizza ut 2.
+30123456 9026 Gyor, Egyetem ter 1.
+201234567 9021 Gyor, Szent Istvan u. 7.
