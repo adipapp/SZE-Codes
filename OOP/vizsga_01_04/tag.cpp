@@ -22,11 +22,17 @@ void Tag::appendChild(TreeNode* newNode)
 
 string Tag::toHTML()
 {
-	string formatted = "<" + tagName + " id=" + id + ">";
-	for (auto& i : nodes) {
-		formatted += i->toHTML();
+	string formatted = "<" + tagName;
+	for (auto i : attributes) {
+		formatted += " " + i.first + "=\"" + i.second + "\" ";
 	}
-	formatted += "</" + tagName + ">";
+	if (id != "") formatted += " id=" + id + ">" + "\n";
+	else formatted += ">\n";
+	
+	for (auto& i : nodes) {
+		formatted += i->toHTML() + "\n";
+	}
+	formatted += "</" + tagName + ">" + "\n";
 	return formatted;
 }
 
@@ -41,4 +47,14 @@ Tag* Tag::getById(string idToSeek)
 		}
 	}
 	return nullptr;
+}
+
+void Tag::setAttribute(string attrName, string attrValue)
+{
+	attributes[attrName] = attrValue;
+}
+
+string Tag::getAttribute(string attrName)
+{
+	return attributes[attrName];
 }

@@ -27,8 +27,8 @@ Tag* HTML::getTagById(string id)
 }
 
 ostream& operator<<(ostream& out, HTML& html) {
-	out << html.getBegin();
-	out << html.getTagById("body")->toHTML();
-	out << html.getEnd();
+	out << html.getBegin() << endl;
+	out << html.getTagById("body")->toHTML() << endl;
+	out << html.getEnd() << endl;
 	return out;
 }

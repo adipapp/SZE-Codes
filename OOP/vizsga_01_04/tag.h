@@ -3,6 +3,7 @@
 
 #include "treenode.h"
 #include <list>
+#include <map>
 
 using namespace std;
 
@@ -14,11 +15,14 @@ public:
 	void appendChild(TreeNode* newNode);
 	virtual string toHTML();
 	Tag* getById(string idToSeek);
+	void setAttribute(string attrName, string attrValue);
+	string getAttribute(string attrName);
 
 private:
 	string tagName;
 	string id;
 	list<TreeNode*> nodes;
+	map<string, string> attributes;
 };
 
 #endif
