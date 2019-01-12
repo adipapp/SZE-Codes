@@ -25,7 +25,8 @@ A Tag-nek lehessen tetszőleges számú és nevű argumentumot adni, amik megfel
 A HTML::getTagById() dobjon egy HTML::IdNotFound exceptiont, ha nincs ilyen id-jű csúcs a dokumentumban. Készítsen hozzá egy megfelelő try-catch blokkot is a main()-be! (+1 jegy)
 
 Tegye lehetővé, hogy egy Tag objektum gyermek csúcsait az osztályon kívülről is be lehessen járni, anélkül, hogy a kifelé láthatóvá tenné az osztály belső tárolási logikáját. A main()-ben mutassa be a használatát is! (max. +2 jegy megvalósítástól függően)
-
+Pontosítás: a Tag objektumok közvetlen gyerekei legyenek indexelhetőek a [] operátorral
+----Ha valaki meg tudta oldani szóljon pls!
 */
 
 #include <iostream>
@@ -41,48 +42,53 @@ using namespace std;
 int main(int argc, char** argv)
 {
     HTML test;
-    
+
+	test.addElement(new Tag("h1", "title"));
+	test.getTagById("title")->appendChild(new Text("Szükséges feltételek OODB vizsgán"));
+
+	test.addElement(new Tag("ul", "requirements"));
+	const list<string> requirements({
+	  "A kód csak standard C++11 elemeket használjon.",
+	  "A kód warning nélkül forduljon le --Wall kapcsoló mellett is.",
+	  "A bináris ne szemeteljen a memóriába.",
+	  "A bináris semmilyen bemenet esetén nem segfaultolhat el."
+		});
+	for (const auto& req : requirements)
+	{
+		Tag* item = new Tag("li");
+		item->appendChild(new Text(req));
+		test.getTagById("requirements")->appendChild(item);
+	}
+
+	test.addElement(new Text("Megj.: A fenti feltételek csak szükségesek, de nem elégségesek a kettes szintjének eléréséhez."));
+
+	//Attribútumok hozzáadása, kiolvasása
+	test.getTagById("requirements")->setAttribute("style", "color:red;");
+
+	/*Kiiratos plusz feladathoz*/
+
+	cout << test;
+	string filename;
+
+	if (argc == 1) filename = "index.html";
+	else filename = argv[1];
+
+	ofstream output(filename);
+	if (output.is_open())
+	{
+		output << test;
+		output.close();
+	}
+
+	//IdNotFound Exeption tesztelése
 	try {
-		test.addElement(new Tag("h1", "title"));
-		test.getTagById("title")->appendChild(new Text("Szükséges feltételek OODB vizsgán"));
-
-		test.addElement(new Tag("ul", "requirements"));
-		const list<string> requirements({
-		  "A kód csak standard C++11 elemeket használjon.",
-		  "A kód warning nélkül forduljon le --Wall kapcsoló mellett is.",
-		  "A bináris ne szemeteljen a memóriába.",
-		  "A bináris semmilyen bemenet esetén nem segfaultolhat el."
-			});
-		for (const auto& req : requirements)
-		{
-			Tag* item = new Tag("li");
-			item->appendChild(new Text(req));
-			test.getTagById("requirements")->appendChild(item);
-		}
-
-		test.addElement(new Text("Megj.: A fenti feltételek csak szükségesek, de nem elégségesek a kettes szintjének eléréséhez."));
-
-		/*Kiiratos plusz feladathoz*/
-
-		cout << test;
-		string filename;
-
-		if (argc == 1) filename = "index.html";
-		else filename = argv[1];
-
-		ofstream output(filename);
-		if (output.is_open())
-		{
-			output << test;
-			output.close();
-		}
-
-		//IdNotFound Exeption tesztelése
 		cout << test.getTagById("ilyennincs")->toHTML();
 	}
 	catch (HTML::IdNotFound e) {
-		cerr << e.message();
+		cerr << e.message() << endl;
 	}
+	   
+	
 	
     return 0;
 }
