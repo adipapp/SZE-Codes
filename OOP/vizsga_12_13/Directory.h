@@ -13,7 +13,7 @@ public:
 	Directory(string dirname);
 	~Directory();
 	int touch(string filename, string content = "");
-	string ls();
+	string ls(int depth);
 	int mkdir(string dirname);
 	string getName();
 	Directory* dirExists(string dirname);

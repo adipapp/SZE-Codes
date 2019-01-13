@@ -49,29 +49,34 @@ int Filesystem::touchindir(string filename, string content, string dirname)
 
 string Filesystem::treelist()
 {
-	string tree = "/\n";
+	int depth = 0;
+	string tree = "\n/\n";
 	for (auto& i : directories) {
-		tree += i->getName() + "/\n" + i->ls() + "\n";
+		tree += "\t" + i->getName() + "/\n" + i->ls(depth+1);
 	}
 	for (auto& i : files) {
-		tree += i->getName() + "\n";
+		tree += "\t" + i->getName() + "\n";
 	}
 	return tree;
 }
 
 int Filesystem::cd(string dirname)
 {
+	if (dirname == "/") {
+		path.clear();
+		return 0;
+	}
 	if (dirname == ".."&&path.empty()) return 1;
 	if (dirname == ".." && !path.empty()) {
 		path.pop_back();
 		return 0;
 	}
 
-	bool relative = dirname[0]!='/'&&!path.empty();
+	bool relative = dirname[0] != '/';
 	list<string> dirs;
 	string temp = "";
 
-	for (unsigned int i = relative ? 1 : 0; i < dirname.length(); i++)
+	for (unsigned int i = relative ? 0 : 1; i < dirname.length(); i++)
 	{
 		if (dirname[i] == '/') {
 			dirs.push_back(temp);
@@ -100,11 +105,12 @@ int Filesystem::cd(string dirname)
 
 string Filesystem::pwd()
 {
-	string actpath = "/";
+	string actpath = "\nadampapp@zeus:";
+	actpath += path.empty() ? "/" : "";
 	for (auto& i : path) {
-		actpath += i->getName();
+		actpath += "/" + i->getName();
 	}
-	return actpath;
+	return actpath + "# ";
 }
 
 Directory * Filesystem::dirExists(string dirname)

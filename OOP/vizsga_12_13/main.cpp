@@ -57,6 +57,7 @@
 
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 #include "Filesystem.h"
@@ -65,22 +66,43 @@ using namespace std;
 
 
 int main() {
+	vector<string> commands = { "mkdir Idezetek", "cd Idezetek", " mkdir HowToPassOOPExam",	"cd ..", "mkdir Kozmondasok",
+		"touch Readme.md", "cd /Idezetek/HowToPassOOPExam", "mkdir HahaItsImpossible", "cd /", "touch /Kozmondasok/Kut.txt",
+		"touch /Idezetek/Gandalf.txt", "touch /Idezetek/Samuel.txt", "ls -R" };
+	vector<string> prompts;
 
 	Filesystem foo;
+	prompts.push_back(foo.pwd());
 	cout << foo.mkdir("Idezetek");
+	prompts.push_back(foo.pwd());
 	cout << foo.cd("Idezetek");
-	cout << foo.mkdir("Kozmondasok");
-	cout << foo.touchindir("Readme.md", "Az Idezetek konyvtartban idezetek vannak, a Kozmondasok konyvtarban kozmondasok. dah....\n");
+	prompts.push_back(foo.pwd());
+	cout << foo.mkdir("HowToPassOOPExam");
+	prompts.push_back(foo.pwd());
 	cout << foo.cd("..");
-	cout << foo.pwd();
+	prompts.push_back(foo.pwd());
+	cout << foo.mkdir("Kozmondasok");
+	prompts.push_back(foo.pwd());
+	cout << foo.touchindir("Readme.md", "Az Idezetek konyvtartban idezetek vannak, a Kozmondasok konyvtarban kozmondasok. dah....\n");
+	prompts.push_back(foo.pwd());
+	cout << foo.cd("/Idezetek/HowToPassOOPExam");
+	prompts.push_back(foo.pwd());
+	cout << foo.mkdir("HahaItsImpossible");
+	prompts.push_back(foo.pwd());
+	cout << foo.cd("/");
+	prompts.push_back(foo.pwd());
 	cout << foo.touchindir("Kut.txt", "Addig jar a korso a kutra, amig el nem torik.", "Kozmondasok");
+	prompts.push_back(foo.pwd());
 	cout << foo.touchindir("Gandalf.txt", "Fussatok bolondok!", "Idezetek");
+	prompts.push_back(foo.pwd());
 	cout << foo.touchindir("Samuel.txt", "I dare you, I double dare you!", "Idezetek");
+	prompts.push_back(foo.pwd());
+	
 
-	cout << endl;
+	for (int i = 0; i < prompts.size(); i++) cout << prompts[i] << commands[i];
 	cout << foo.treelist();
 
-	//Első 3 plusz feladat kész, 4.-nél csak Filesystem mkdir-je ok, az összes többi feladat meg nem is lesz megcsinálva
+	//Első 3 plusz feladat kész, 4.-nél Filesystem mkdir-je csak working-dir-be tud, az összes többi feladat meg nem is lesz megcsinálva
 
 	return 0;
 }

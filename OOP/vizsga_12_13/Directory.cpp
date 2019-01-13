@@ -24,13 +24,15 @@ int Directory::touch(string filename, string content)
 	return 0;
 }
 
-string Directory::ls()
+string Directory::ls(int depth)
 {
 	string dircontent = "";
 	for (auto& i : directories) {
-		dircontent += i->getName() + "/\n" + i->ls() + "\n";
+		for (int j = 0; j <= depth; j++) dircontent += "\t";
+		dircontent += i->getName() + "/\n" + i->ls(depth+1);
 	}
 	for (auto& i : files) {
+		for (int j = 0; j <= depth; j++) dircontent += "\t";
 		dircontent += i->getName() + "\n";
 	}
 	return dircontent;
