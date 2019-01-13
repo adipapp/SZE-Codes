@@ -6,9 +6,9 @@ using namespace std;
 
 int table[9][9];
 
-void readfromfile(){
-	ifstream f("beginner.txt");
-	if (f.is_open()){
+void readfromfile() {
+	ifstream f("tabla.txt");
+	if (f.is_open()) {
 		int row = 0;
 		while (!f.eof())
 		{
@@ -25,10 +25,10 @@ void readfromfile(){
 	f.close();
 }
 
-void print(){
+void print() {
 	for (int i = 0; i < 9; i++)
 	{
-		if (i % 3 == 0 && i != 0){
+		if (i % 3 == 0 && i != 0) {
 			for (int k = 0; k < 11; k++) cout << "*";
 			cout << endl;
 		}
@@ -42,8 +42,8 @@ void print(){
 	}
 }
 
-bool goodvalues(int row, int column, int value){
-	if (row + 1<1 || row + 1 - 1>9 || column + 1<1 || column + 1>9 || value + 1<1 || column + 1>9) return false;
+bool goodvalues(int row, int column, int value) {
+	if (row + 1 < 1 || row + 1 - 1 > 9 || column + 1 < 1 || column + 1 > 9 || value + 1 < 1 || column + 1 > 9) return false;
 	if (table[row][column] != 0) return false;
 
 	for (int i = 0; i < 9; i++)
@@ -58,17 +58,17 @@ bool goodvalues(int row, int column, int value){
 			if (table[i][j] == value) return false;
 		}
 	}
-	
+
 	table[row][column] = value;
 	return true;
 }
 
-bool finish(){
+bool finish() {
 	for (int i = 0; i < 9; i++) for (int j = 0; j < 9; j++) if (table[i][j] == 0) return false;
 	return true;
 }
 
-void main(){
+void main() {
 	readfromfile();
 	cout << "Sudoku\nAdjon meg szamharmasokat kulon sorokba az [1, 9] intervallumban sor oszlop ertek sorrendben!\n";
 	bool end = false;
@@ -82,10 +82,10 @@ void main(){
 			cin >> r;
 			cin >> c;
 			cin >> v;
-			if (r == 0 && c == 0 && v == 0) end=true;
+			if (r == 0 && c == 0 && v == 0) end = true;
 		} while (!goodvalues(r - 1, c - 1, v) && !end);
-		
-		if (finish()){
+
+		if (finish()) {
 			cout << "Gratulalok On nyert!\n";
 			end = true;
 		}
