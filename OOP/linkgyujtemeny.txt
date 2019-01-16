@@ -1,0 +1,24 @@
+OOP videók:
+https://my.pcloud.com/publink/show?code=kZ46Ox7ZEzvR3MWDJKVp0nW6i8udHQVzfC4V
+
+C++-os könyv:
+https://www.pdfdrive.com/balaguruswamy-oop-with-c-d26350490.html
+
+Könyvbeli pédák megoldásai:
+https://www.pdfdrive.com/oop-with-c-by-e-balagurusamy-solution-e33517851.html
+
+PE - Korsz.Szoft.fejl. gyakorlófeladatok:
+https://www.dropbox.com/sh/dpb7fln95e092mp/AACKfKz74oa3OgqIQHtsomNBa?dl=0
+
+Prog verseny feladatok:
+https://sites.google.com/site/hegyhatiedu/
+
+Máté github linkje:
+https://github.com/Teaching-projects/ClassRoomExamples/tree/master/SZE/OODB
+
+PE-s gyakorló:
+https://my.pcloud.com/publink/show?code=kZUNTe7ZU62djNtsMrbyRAMhP4i6XLGWH23V
+
+Saját github:
+https://github.com/adipapp/SZE-Codes/tree/master/OOP
+
