@@ -1,0 +1,5 @@
+﻿Brighton Liverpool 7.50 4.80 1.30
+Chelsea Newcastle 1.22 5.50 9.50
+Burnley Fulham 2.40 2.95 2.85
+Tottenham ManUtd 2.05 3.35 3.10
+WestHam Arsenal 3.25 3.45 1.95

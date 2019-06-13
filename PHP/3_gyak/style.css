@@ -1,0 +1,12 @@
+td{
+    font-family: Arial;
+    border: solid 1pt black;
+}
+
+thead{
+    font-weight: bold;
+}
+
+tr:nth-child(odd){
+    background-color: lightgray;
+}

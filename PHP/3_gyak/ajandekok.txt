@@ -1,0 +1,24 @@
+﻿Duplafalu bogracs
+4500
+Cicanadrag-gomb
+100
+Satrasjatek
+3200
+Kredenc
+20000
+Lo-etetoszek
+12000
+Sajtlyukaszto
+200
+Szamarfulbevalo
+500
+Szonikus csavarhuzo
+42000
+Lyukas gumi
+50
+Humorszatyor
+250
+Humorzsak
+550
+Paszternak
+300
