@@ -1,0 +1,10 @@
+Tematika, amiről szó volt az egyes alkalmakon:
+
+1. alkalom (10.03)
+ - OOP alapelvei
+ - osztály, objektum, példányosítás
+ - konstruktorok, default konstruktor, default paraméterek
+ - getter fgv-ek
+ - láthatósági szintek (public, private)
+ - header fájlok, header guard
+ - Visual Studio hasznos dolgok: debuggolás, automaikus kommentelés, kódformázás
