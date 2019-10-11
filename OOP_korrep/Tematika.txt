@@ -8,3 +8,11 @@ Tematika, amiről szó volt az egyes alkalmakon:
  - láthatósági szintek (public, private)
  - header fájlok, header guard
  - Visual Studio hasznos dolgok: debuggolás, automaikus kommentelés, kódformázás
+
+2. alkalom (10.10)
+ - const függvények, const objektumok
+ - objektumra mutató pointerek
+ - *, &, -> operátorok, pointerek kezelése
+ - destruktorok
+ - láncolt listák átismétlése
+ - Visual Studio hasznos dolgok: memóriaszemét detektálása
