@@ -1,0 +1,13 @@
+Választásos feladat továbbfejlesztése:
+
+ - jeloltTorol fgv befejezése: a láncolt listából tudjon a program adott nevû jelöltet kitörölni (ha nincs olyan nevû jelölt ne tegyen semmit)
+ - jeloltetekListaz fgv módosítása: a fgv ne csak a jelölt nevét írja ki hanem annak pártját, választókerültét, és a szavazatainak számát is
+ - a Jelolt osztálynak egy szavaz fgv készítése, amellyel adott számú szavazat adható le a jelöltre. Amennyiben nem adunk paramétert a fgv-nek akkor vegyük úgy hogy 1 szavazatot adunk le.
+ - a Valasztasirendszer osztálynak egy jeloltreSzavaz fgv készítése, amellyel adott nevû jelöltre adható adott számú szavazat. Amennyiben csak a jelölt nevét adjuk meg akkor vegyük úgy hogy 1 szavazatot adunk le. (tipp: ez a fgv meghívhatja a Jelolt objektumok szavaz fgv-ét)
+ - a Valasztasirendszer osztálynak legyen egy szavazasraJogosultak adattagja, amelyet kötelezõ paraméterként a konstruktor állítson be. Az adattagoknál a megfelelõ adatrejtésre figyeljetek! (private+getter fgv)
+
+Fgv-ek a Valasztasirendszer osztályba:
+ - reszveteliArany fgv készítése, amely megadja hogy a szavazásra jogosultak hány %-a vett részt a választáson
+ - gyoztesJelolt fgv készítése, amely megadja hogy melyik jelölt kapta a legtöbb szavazatot
+ - partSzavazatok fgv készítése, amely megadja hogy az összes leadott szavazat hány %-át kapta az adott nevû párt 
+ - korzetSzavazatok fgv készítése, amely megadja hogy adott választókerületben ki volt a gyõztes jelölt, aki alegtöbb szavazatot kapta
