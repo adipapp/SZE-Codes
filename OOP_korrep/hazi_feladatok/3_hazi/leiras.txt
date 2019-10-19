@@ -1,0 +1,19 @@
+A Star-Wars-os projekt feljesztése:
+ - A Karakter osztályt tedd absztrakt osztállyá (a pure virtual fgv-e a print legyen)
+ - Alakítsd át Karakter osztály setEro fgv-t úgy, hogy a paraméterként neki átadott értékre ne beállítsa, hanem ezzel az értékkel megnövelje (negatív szám estén csökkentse) az ero értékét.
+
+ - Származtass a Karakter osztályból egy Sith osztályt, amelyben a következő tagok vannak:
+		* publikus konstruktor, amely beállítja a sith nevét, erejét és gyengeségét
+		* egy engeddElHaragod fgv amely egy random 0 és 5 közötti értékkel megnöveli a Sith erejét. Ez az objektum felől nem, de az esetleges gyerekeiből elérhető.
+		  Arra figyeljetek, hogy mivel az ero egy százalékos érték ezért a 100-at sosem lépheti át egyik osztályban sem. Ha nagyobb lenne az ero értéke mint 100 akkor egyik fgv se növelje azt. (tehát: érdemes ezt szülő osztály szinten biztosítani)
+		* egy logikai vanEGyengesege privát adattag amelyet nem kötelező paraméterként a konstruktor állít be. Alapból minden sith-nek van gyengesége. (+publikus getter és setter fgv-ek)
+		* definiálja felül a Karakter osztály print fgv-ét aképpen, hogy írja ki a sith nevét, erejét, és hogy van-e gyengesége
+
+ - A Jedi osztályt egészítsd ki egy atjarjaAzEro fgv-el, amely az objektum felől nem, de az esetleges gyerekeiből elérhető.
+   Ez a fgv egy random 0 és 8 közötti értékkel megnöveli a Jedi erejét.
+
+ - A Karakter osztályt egészítsd ki egy pure virtuális harc fgv-el amely egy Karakterre mutató pointert vár. Értelem szerűen mind a Jedi, mind a Sith osztály definiálja felül ezt a fgv-t az alábbiak szerint:
+   Harc esetén ha Sith-ről van szó elengedi a haragját, ha Jedi-ről átjárja az erő.
+   A frissített ero értékét hasonlítsd össze a paraméterként megadott karakter erejével. A győztes ereje maradjon változatlan, a vesztesé pedig csökkenjen 1 és 8 közötti random értékkel.
+   Kikötés: Jedi Jedivel és Sith Sithtel ne harcolhasson! Amennyiben a paraméter típusa azonos az osztályéval, akkor a fgv ne tegyen semmit! (ne engedje el a haragját/járja át az erő)
+   Segítség: mivel paraméterként ősosztály (Karakter) típust adunk át, így a paraméterként átadott Karakterről el kell valahogy döntenünk, hogy Jedi vagy Sith-e. Ehhez használjuk a dynamic_cast-ot.

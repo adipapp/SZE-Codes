@@ -16,3 +16,11 @@ Tematika, amiről szó volt az egyes alkalmakon:
  - destruktorok
  - láncolt listák átismétlése
  - Visual Studio hasznos dolgok: memóriaszemét detektálása
+
+3. alkalom (10.17)
+ - copy constructor, copy assignment operator, Rule of 3
+ - öröklődés, öröklődési típusok, szabályok, best practice-ek
+ - virtuális tagfüggvények
+ - absztrakt osztályok
+ - dinamikus (futás idejű) polimorfizmus
+ - dynamic_cast használata
