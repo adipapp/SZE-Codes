@@ -1,0 +1,31 @@
+Önálló órai feladatok:
+Készítsetek egy Lakas osztályt, amely a következõ tagokat tartalmazza:
+ - int nm adattag, amely megadja, hogy hány négyzetméteres az adott lakás
+ - string cim adattag, amely megadja hol található a lakás
+ - int arPerNm adattag, amely megadja mekkora a lakás négyzetméterenkénti ára
+ - string* tulajok: egy dinamikusan méretezhetõ, kezdetben 0 méretû string típusú tömb, amely az eddigi tulajokat tárolja
+ - int tulajDb adattag, amely megadja hány tulajdonosa volt eddig a lakásnak
+   Az egyik adattagot se lehessen az objektum felõl elérni, de a gyerek osztályokból igen.
+ - konstruktor, amely a fenti 3 adattagot beállítja, a tulajok számát és a tulajok tömböt pedig nullázza
+ - vetelar fgv, amely egész típussal visszatérve megadja, mennyibe kerül az adott lakás
+ - elad fgv, amely a következõt csinálja: paraméterként egy string-et vár, amelyet beilleszt a tulajok tömb végére, miközben átméretezi azt, és a tulajok számát megnöveli.
+   Mindkét fgv-nek elérhetõnek kell lennie az osztálypéldány felõl.
+
+Készítsetek egy Alberlet osztályt, amely a Lakas osztályból származik oly módon, hogy az õsosztály tagjainak láthatósági szintje nem csorbul
+és a következõ tagokat tartalmazza pluszban:
+ - string* alberlok: egy dinamikusan méretezhetõ, kezdetben 0 méretû string típusú tömb, amely az eddigi albérlõket tárolja
+ - int alberloDb adattag, amely megadja hány albérlõje volt eddig a lakásnak
+   Az egyik adattagot se lehessen az objektum felõl elérni, de a gyerek osztályokból igen.
+ - konstruktor, amely szülõosztálytól örökölt adattagokat beállítja, az albérlõk számát és az albérlõk tömböt pedig nullázza
+ - szerzodik fgv, amely a következõt csinálja: paraméterként egy string-et vár, amelyet beilleszt az alberlok tömb végére, miközben átméretezi azt és az albérlõk számát megnöveli.
+   A fgv-nek elérhetõnek kell lennie az osztálypéldány felõl.
+
+============================================
+
+Közös órai feladatok:
+ -> Gondoskodjunk a dinamikusan foglalt erõforrások felszabadításáról.
+ -> Tiltsuk le a osztályok másolhatóságát.
+ -> A négyzetméterenkénti árat ne kelljen objektumonként megadni és lehessen egyszerre az összes objektumra módosítani.
+ -> Lehessen a Lakas és az Alberlet típusú objektumokat a << operátor segítségével kiíratni a képernyõre.
+ -> Legyen a Lakas típusú objektumnak egy olyan konstruktora is, amely a fent leírtakon felül egy string fájlnevet is vár.
+    Ebbe a fájlba egy konstans printToFile fgv meghívásakor kiírja címét, árát, alapterületét és a tulajainak nevét.
