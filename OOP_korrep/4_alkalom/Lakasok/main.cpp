@@ -6,7 +6,9 @@
 using namespace std;
 
 int main() {
-	Lakas* l = new Lakas("9021 Gyor, Szechenyi ter 34.", 54, 120000);
+	Lakas::setArPerNm(210000);
+
+	Lakas* l = new Lakas("9021 Gyor, Szechenyi ter 34.", 54);
 	l->elad("Kiss Janos");
 	l->elad("Kovacs Agnes");
 	l->elad("Joó Laszlo");
@@ -15,16 +17,19 @@ int main() {
 	l->elad("Poor Tamas");
 	cout << "A lakas erteke: " << l->vetelar() << endl;
 
-	Alberlet* a = new Alberlet("9021 Gyor, Szechenyi ter 34.", 54, 120000);
+	Lakas* a = new Alberlet("9022 Gyor, Batthyany ter 5.", 45);
 	a->elad("Tamas Gabor");
-	a->szerzodik("Nagy Fruzsina");
-	a->szerzodik("Nemeth Dora");
-	a->szerzodik("Keri Robert");
+	//a->szerzodik("Nagy Fruzsina");
+	//a->szerzodik("Nemeth Dora");
+	//a->szerzodik("Keri Robert");
 	a->elad("Agoston Jozsef");
 	cout << "Az alberlet erteke: " << a->vetelar() << endl;
 
-	string* a[];
-	string* a = new string[];
+	//Lakas ll = Lakas(*l);
+	//Alberlet aa = Alberlet(*a);
+	
+	delete l;
+	delete a;
 
 	return 0;
 }
