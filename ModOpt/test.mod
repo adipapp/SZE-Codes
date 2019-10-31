@@ -1,0 +1,1 @@
+minimize z:0;
