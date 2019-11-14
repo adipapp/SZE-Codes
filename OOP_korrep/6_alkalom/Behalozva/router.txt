@@ -1,0 +1,5 @@
+192.168.10.1	GigabitEthernet0/0/1
+10.0.11.3	GigabitEthernet0/0/0
+193.225.219.17	GigabitEthernet1/0/1
+193.224.129.143	TenGigabitEthernet0/0/0
+172.16.10.5	TenGigabitEthernet0/0/1

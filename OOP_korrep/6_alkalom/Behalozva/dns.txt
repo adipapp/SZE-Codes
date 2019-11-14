@@ -1,0 +1,5 @@
+janigepe.sajatnet.hu	192.168.10.1
+karcsigepe.sajatnet2.eu	10.0.11.3
+elit.jedlik.eu	193.225.219.17
+uni.sze.hu	193.224.129.143
+ftp.corpdomain.com	172.16.10.5

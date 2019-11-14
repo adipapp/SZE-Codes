@@ -1,0 +1,17 @@
+Elveszve a mátrixban
+A feladat egy olyan program készítése amely fájlból képes beolvasni egy tetszõleges típusú mátrixot és azon elõre meghatározott mûveleteket végezni.
+Készíts egy template-elt Matrix osztályt, amely template paramétere meghatározza, hogy a mátrix milyen típusú elemekbõl áll.
+Az osztály a következõ adattagokkal kell hogy rendelkezzen:
+ - nev: megadja a mátrix nevét, a konstruktor állítja be
+ - tetszõleges nevû és típusú adattag (csak 1 db!) amely a mátrix elemeit tárolja tetszõleges választott struktúrában.
+   Tipp: érdemes valamilyen STL tárolóban gondolkodni
+Egyik adattagot se lehessen az osztálypéldány felõl elérni, valamint ne lehessen az osztályt paraméter nélküli konstruktorral példányosítani.
+A következõ funkciókkal/tagfgv-ekkel rendelkezzen az osztály:
+ - teljes: logikai igazzal tér vissza ha a mátrix összes sorában egyenlõ számú elem található
+ - beolvas: paraméterként egy fájlnevet kap, amelybõl (ha létezik) akkor olvassa be a mátrix sorait (a fájl szerkezetét nem kell ellenõrizni)
+   Amennyiben a fájl nem létezik vagy nem megnyitható, dobjunk hibát. (amelyet megfelelõen kezeljünk is le, pl: a standart hibakimenetre egyedi üzenet formájában)
+ - << operátor: ennek segítségével kiírható cout-ra a mátrix neve és tartalma tetszõleges, ember számára emészhetõ formátumban
+ - rendez: képes rendezni a mátrix egyes soraiban az elemeket.
+   Tipp: 2 opció közül érdemes választani;
+   1) valamilyen már tanult rendezõ algoritmust ráereszteni az egyes sorokra, és az adattípusra amennyiben szükséges, definiálni egy hasonlító operátort
+   2) használni beépített rendezõ fgv-eket, amelyhez amennyiben szükséges definiálni kell ún. comparator fgv-t az adott típusra

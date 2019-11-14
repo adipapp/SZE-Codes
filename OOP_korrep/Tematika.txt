@@ -24,3 +24,15 @@ Tematika, amiről szó volt az egyes alkalmakon:
  - absztrakt osztályok
  - dinamikus (futás idejű) polimorfizmus
  - dynamic_cast használata
+
+4. alkalom (10.24)
+ - statikus adattagok és függvények
+ - destruktorok öröklődés esetén, virtuális destruktor
+ - objektum másolásának tiltása
+
+5. alkalom (10.31)
+ - operátorok túltöltése
+ - friend és inline függvények
+ - template-ek
+
+Minden további alkalom vizsga szintű feladatok gyakorlásáról fog szólni.

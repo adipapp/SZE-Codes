@@ -1,0 +1,50 @@
+Behálózva
+A feladat az egyes hálózati eszközöket (nagyon[-nagyon])alap szinten szimuláló program készítése.
+Készíts egy template-elt NetworkDevice osztályt, amely 2 template paraméterrel rendelkezik. (pl: T1 és T2)
+Ez az osztály, a template paramétereinek megfelelõen többféle hálózati eszközt is tud majd szimulálni.
+Az osztály lelke egy asszociatív tömb, amely kulcsának és értékének típusa a 2 template paraméter. Ez a tömb fogja tárolni a hálózati eszközök (egyik) lelkét jelentõ táblá(ka)t, amelyek alapján a forgalomirányítási/kapcsolási/névfeloldási döntéseket meghozzák.
+Tehát a NetworkDevice osztály a következõ adattagokkal kell, hogy rendelkezzen:
+ - hostname: az eszköz hosztnevét tárolja
+ - table: az eszközre releváns táblát tárolja (a táblázatnak 2 oszlopa és tetszõleges számú van az elsõ oszlop T1 a második T2 típusú)
+   Tipp: érdemes valamilyen STL tárolóban gondolkodni
+Az adattagokat ne lehessen az osztálypéldány felõl elérni.
+Az osztály a következõ funkciókat/tagfüggvényeket valósítsa meg:
+ - konstruktor, amely beállítja a hosztnevet, a táblát pedig nullázza
+ - konstruktor, amely beállítja a hosztnevet és második paraméterként egy fájlnevet vár, amelybõl beolvassa táblájának tartalmát.
+   A fájl tartalmának szerkezetét nem, de a fájl meglétét, megnyitása során jelentkezõ hibákat ellenõrizni kell, probléma esetén nullázzuk a táblát.
+ - getter fgv a hosztnév lekérdezéséhez
+ - printTable: az eszköz táblájának tartalmát adja vissza tetszõleges, emberi lény számára emészthetõ formátumban, string-ként
+ - transferUnit: T1 típusú paramétert vár és ha talál hozzá tartozó értéket a táblában akkor azt visszaadja (egy T2 típust)
+ - addTableEntry: egy T1 és egy T2 típusú paramétert vár, amelyeket hozzáfûz a táblához amennyiben még nincsenek benne. Amennyiben T1-hez már tartozik érték, írja azt felül, egyébként ne tegyen semmit.
+
+Készíts egy IP osztályt amely egy IP címet reprezentál. Az osztály a következõ adattagokkal rendelkezzen:
+ - octet1 ... octet4: az IP cím oktetjeit tárolja decimális formában
+   Pl: 192.168.12.3 -> octet1=192, octet2=168, octet3=12, octet4=3
+ - readableAddress: a teljes IP címet tartalmazza pontokkal elválasztva az okteteket (string)
+Az osztály a következõ funkciókat/tagfüggvényeket valósítsa meg:
+ - konstruktor, amely beállítja a paraméterben string-ként kapott címet
+ - operator==: képes két IP címrõl eldönteni, hogy azonosak-e
+ - operator<: képes két IP címrõl eldönteni, hogy a második nagyobb-e mint az elsõ
+   Pl: 192.168.12.8 < 192.168.11.9 -> false, 192.168.5.9 < 224.0.0.6 -> true
+ - print: a cím olvasható formáját adja vissza string-ként
+
+Plusz feladatok:
+ * egészítsd ki az IP osztályt egy toBinary fgv-el, amely a (tetszõleges) bináris alakját adja vissza az IP címnek
+   pl: 192.168.1.1 -> 11000000 10101000 00000001 00000001
+ * készíts egy Address absztrakt osztályt, amelybõl származtatod az IP osztályt. Az õsosztály valósítsa meg a következõ tagokat: readableAddress, print, operator==
+ * származtass az Address soztályból egy MAC osztályt, amely egy MAC címet képes tárolni hagyományos felírási formában.
+   pl: 00:50:56:C0:00:08
+   Plusz funkciók: printCiscoFormat fgv, amely a minta szerinti formában írja ki a MAC címet
+   pl: 00:50:56:C0:00:08 -> 0050.56C0.0008
+   Másrészrõl lehessen példányosítani hagyományos és Cisco formátumú címekkel is, a print fgv mindig a hagyományos, a printCiscoFormat pedig mindig a Cisco által használt formátumot adja vissza.
+ * Készíts egy Subnet osztályt, amely a következõ tagokkal rendelkezzen:
+   -- ip, mask: IP típusú privát adattagok
+      pl: ip=192.168.10.0, mask=255.255.255.0
+   -- konstruktor amely a fenti két adattagok beállítja (a maskot peres formában)
+   -- printPerFormat: peres formában adja vissza az alhálózat adatait (string)
+      pl: 192.168.10.0/24
+   -- printDecimalFormat: decimális formában adja vissza az alhálózat adatait (string)
+      pl: 192.168.10.0 255.255.255.0
+   -- isTheSameSubnet: egy IP típust váró fgv, amely eldönti hogy az adott alhálózatban van-e a cím.
+      Segítség: el lehet indulni úgy, hogy össze kell ÉS-elni a Subnet objektum mask-ját a paraméterként kapott IP objektummal, és ha az eredmény egyezik a Subnet ip-jével akkor tagja az alhálózatnak, egyébként nem. (erre kell majd a toBinary fgv)
+      pl: Subnet(192.168.10.0/25), IP(192.168.10.128) -> ezek nincsenek egy alhálózatban, mert 192.168.10.0/25 az 128 méretû alháló, 192.168.10.0-192.168.10.127 tart
