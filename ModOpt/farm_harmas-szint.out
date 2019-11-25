@@ -1,0 +1,326 @@
+Problem:    farm_harmas
+Rows:       51
+Columns:    100 (75 integer, 0 binary)
+Non-zeros:  919
+Status:     INTEGER OPTIMAL
+Objective:  LastDayBalance = 322 (MAXimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 FirstDayBalance
+                                  20            20             = 
+     2 DailyStartBalance[2]
+                                   0            -0             = 
+     3 DailyStartBalance[3]
+                                   0            -0             = 
+     4 DailyStartBalance[4]
+                                   0            -0             = 
+     5 DailyStartBalance[5]
+                                   0            -0             = 
+     6 DailyStartBalance[6]
+                                   0            -0             = 
+     7 DailyStartBalance[7]
+                                   0            -0             = 
+     8 DailyStartBalance[8]
+                                   0            -0             = 
+     9 DailyStartBalance[9]
+                                   0            -0             = 
+    10 DailyStartBalance[10]
+                                   0            -0             = 
+    11 DailyStartBalance[11]
+                                   0            -0             = 
+    12 DailyStartBalance[12]
+                                   0            -0             = 
+    13 DailyStartBalance[13]
+                                   0            -0             = 
+    14 DailyStartBalance[14]
+                                   0            -0             = 
+    15 DailyStartBalance[15]
+                                   0            -0             = 
+    16 DailyStartBalance[16]
+                                   0            -0             = 
+    17 DailyStartBalance[17]
+                                   0            -0             = 
+    18 DailyStartBalance[18]
+                                   0            -0             = 
+    19 DailyStartBalance[19]
+                                   0            -0             = 
+    20 DailyStartBalance[20]
+                                   0            -0             = 
+    21 DailyStartBalance[21]
+                                   0            -0             = 
+    22 DailyStartBalance[22]
+                                   0            -0             = 
+    23 DailyStartBalance[23]
+                                   0            -0             = 
+    24 DailyStartBalance[24]
+                                   0            -0             = 
+    25 DailyStartBalance[25]
+                                   0            -0             = 
+    26 DontOverBuy[1]
+                                   0            -0               
+    27 DontOverBuy[2]
+                                   0            -0               
+    28 DontOverBuy[3]
+                                   4            -0               
+    29 DontOverBuy[4]
+                                   8            -0               
+    30 DontOverBuy[5]
+                                   2            -0               
+    31 DontOverBuy[6]
+                                   6            -0               
+    32 DontOverBuy[7]
+                                   2            -0               
+    33 DontOverBuy[8]
+                                   8            -0               
+    34 DontOverBuy[9]
+                                   6            -0               
+    35 DontOverBuy[10]
+                                   4            -0               
+    36 DontOverBuy[11]
+                                   4            -0               
+    37 DontOverBuy[12]
+                                  16            -0               
+    38 DontOverBuy[13]
+                                   0            -0               
+    39 DontOverBuy[14]
+                                   4            -0               
+    40 DontOverBuy[15]
+                                  18            -0               
+    41 DontOverBuy[16]
+                                   4            -0               
+    42 DontOverBuy[17]
+                                   0            -0               
+    43 DontOverBuy[18]
+                                   6            -0               
+    44 DontOverBuy[19]
+                                   2            -0               
+    45 DontOverBuy[20]
+                                  42            -0               
+    46 DontOverBuy[21]
+                                  92            -0               
+    47 DontOverBuy[22]
+                                 142            -0               
+    48 DontOverBuy[23]
+                                 202            -0               
+    49 DontOverBuy[24]
+                                 262            -0               
+    50 DontOverBuy[25]
+                                 322            -0               
+    51 LastDayBalance
+                                 322                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 dailyStartBalance[1]
+                                  20             0               
+     2 dailyStartBalance[2]
+                                   0             0               
+     3 dailyStartBalance[3]
+                                   4             0               
+     4 dailyStartBalance[4]
+                                   8             0               
+     5 dailyStartBalance[5]
+                                  12             0               
+     6 dailyStartBalance[6]
+                                   6             0               
+     7 dailyStartBalance[7]
+                                  12             0               
+     8 dailyStartBalance[8]
+                                   8             0               
+     9 dailyStartBalance[9]
+                                  16             0               
+    10 dailyStartBalance[10]
+                                  14             0               
+    11 dailyStartBalance[11]
+                                  14             0               
+    12 dailyStartBalance[12]
+                                  16             0               
+    13 dailyStartBalance[13]
+                                  30             0               
+    14 dailyStartBalance[14]
+                                  14             0               
+    15 dailyStartBalance[15]
+                                  18             0               
+    16 dailyStartBalance[16]
+                                  34             0               
+    17 dailyStartBalance[17]
+                                  30             0               
+    18 dailyStartBalance[18]
+                                  26             0               
+    19 dailyStartBalance[19]
+                                  32             0               
+    20 dailyStartBalance[20]
+                                  42             0               
+    21 dailyStartBalance[21]
+                                  92             0               
+    22 dailyStartBalance[22]
+                                 142             0               
+    23 dailyStartBalance[23]
+                                 202             0               
+    24 dailyStartBalance[24]
+                                 262             0               
+    25 dailyStartBalance[25]
+                                 322             0               
+    26 boughtFarmers[1,Peasant]
+                    *              2             0               
+    27 boughtFarmers[1,Plower]
+                    *              0             0               
+    28 boughtFarmers[1,Harvester]
+                    *              0             0               
+    29 boughtFarmers[2,Peasant]
+                    *              0             0               
+    30 boughtFarmers[2,Plower]
+                    *              0             0               
+    31 boughtFarmers[2,Harvester]
+                    *              0             0               
+    32 boughtFarmers[3,Peasant]
+                    *              0             0               
+    33 boughtFarmers[3,Plower]
+                    *              0             0               
+    34 boughtFarmers[3,Harvester]
+                    *              0             0               
+    35 boughtFarmers[4,Peasant]
+                    *              0             0               
+    36 boughtFarmers[4,Plower]
+                    *              0             0               
+    37 boughtFarmers[4,Harvester]
+                    *              0             0               
+    38 boughtFarmers[5,Peasant]
+                    *              1             0               
+    39 boughtFarmers[5,Plower]
+                    *              0             0               
+    40 boughtFarmers[5,Harvester]
+                    *              0             0               
+    41 boughtFarmers[6,Peasant]
+                    *              0             0               
+    42 boughtFarmers[6,Plower]
+                    *              0             0               
+    43 boughtFarmers[6,Harvester]
+                    *              0             0               
+    44 boughtFarmers[7,Peasant]
+                    *              1             0               
+    45 boughtFarmers[7,Plower]
+                    *              0             0               
+    46 boughtFarmers[7,Harvester]
+                    *              0             0               
+    47 boughtFarmers[8,Peasant]
+                    *              0             0               
+    48 boughtFarmers[8,Plower]
+                    *              0             0               
+    49 boughtFarmers[8,Harvester]
+                    *              0             0               
+    50 boughtFarmers[9,Peasant]
+                    *              1             0               
+    51 boughtFarmers[9,Plower]
+                    *              0             0               
+    52 boughtFarmers[9,Harvester]
+                    *              0             0               
+    53 boughtFarmers[10,Peasant]
+                    *              1             0               
+    54 boughtFarmers[10,Plower]
+                    *              0             0               
+    55 boughtFarmers[10,Harvester]
+                    *              0             0               
+    56 boughtFarmers[11,Peasant]
+                    *              1             0               
+    57 boughtFarmers[11,Plower]
+                    *              0             0               
+    58 boughtFarmers[11,Harvester]
+                    *              0             0               
+    59 boughtFarmers[12,Peasant]
+                    *              0             0               
+    60 boughtFarmers[12,Plower]
+                    *              0             0               
+    61 boughtFarmers[12,Harvester]
+                    *              0             0               
+    62 boughtFarmers[13,Peasant]
+                    *              0             0               
+    63 boughtFarmers[13,Plower]
+                    *              1             0               
+    64 boughtFarmers[13,Harvester]
+                    *              0             0               
+    65 boughtFarmers[14,Peasant]
+                    *              1             0               
+    66 boughtFarmers[14,Plower]
+                    *              0             0               
+    67 boughtFarmers[14,Harvester]
+                    *              0             0               
+    68 boughtFarmers[15,Peasant]
+                    *              0             0               
+    69 boughtFarmers[15,Plower]
+                    *              0             0               
+    70 boughtFarmers[15,Harvester]
+                    *              0             0               
+    71 boughtFarmers[16,Peasant]
+                    *              0             0               
+    72 boughtFarmers[16,Plower]
+                    *              1             0               
+    73 boughtFarmers[16,Harvester]
+                    *              0             0               
+    74 boughtFarmers[17,Peasant]
+                    *              0             0               
+    75 boughtFarmers[17,Plower]
+                    *              1             0               
+    76 boughtFarmers[17,Harvester]
+                    *              0             0               
+    77 boughtFarmers[18,Peasant]
+                    *              2             0               
+    78 boughtFarmers[18,Plower]
+                    *              0             0               
+    79 boughtFarmers[18,Harvester]
+                    *              0             0               
+    80 boughtFarmers[19,Peasant]
+                    *              0             0               
+    81 boughtFarmers[19,Plower]
+                    *              1             0               
+    82 boughtFarmers[19,Harvester]
+                    *              0             0               
+    83 boughtFarmers[20,Peasant]
+                    *              0             0               
+    84 boughtFarmers[20,Plower]
+                    *              0             0               
+    85 boughtFarmers[20,Harvester]
+                    *              0             0               
+    86 boughtFarmers[21,Peasant]
+                    *              0             0               
+    87 boughtFarmers[21,Plower]
+                    *              0             0               
+    88 boughtFarmers[21,Harvester]
+                    *              0             0               
+    89 boughtFarmers[22,Peasant]
+                    *              0             0               
+    90 boughtFarmers[22,Plower]
+                    *              0             0               
+    91 boughtFarmers[22,Harvester]
+                    *              0             0               
+    92 boughtFarmers[23,Peasant]
+                    *              0             0               
+    93 boughtFarmers[23,Plower]
+                    *              0             0               
+    94 boughtFarmers[23,Harvester]
+                    *              0             0               
+    95 boughtFarmers[24,Peasant]
+                    *              0             0               
+    96 boughtFarmers[24,Plower]
+                    *              0             0               
+    97 boughtFarmers[24,Harvester]
+                    *              0             0               
+    98 boughtFarmers[25,Peasant]
+                    *              0             0               
+    99 boughtFarmers[25,Plower]
+                    *              0             0               
+   100 boughtFarmers[25,Harvester]
+                    *              0             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 1.78e-15 on row 6
+        max.rel.err = 1.78e-15 on row 6
+        High quality
+
+End of output
