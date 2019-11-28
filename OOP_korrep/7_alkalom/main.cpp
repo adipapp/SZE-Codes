@@ -30,12 +30,12 @@ Pontosítás: a Tag objektumok közvetlen gyerekei legyenek indexelhetőek a [] 
 */
 
 #include <iostream>
-#include "html.h"
-#include "tag.h"
-#include "text.h"
 #include <string>
 #include <list>
 #include <fstream>
+#include "html.h"
+#include "tag.h"
+#include "text.h"
 
 using namespace std;
 
@@ -63,7 +63,7 @@ int main(int argc, char** argv)
 	test.addElement(new Text("Megj.: A fenti feltételek csak szükségesek, de nem elégségesek a kettes szintjének eléréséhez."));
 
 	//Attribútumok hozzáadása, kiolvasása
-	test.getTagById("requirements")->setAttribute("style", "color:red;");
+	//test.getTagById("requirements")->setAttribute("style", "color:red;");
 
 	/*Kiiratos plusz feladathoz*/
 
@@ -80,13 +80,13 @@ int main(int argc, char** argv)
 		output.close();
 	}
 
-	//IdNotFound Exeption tesztelése
-	try {
-		cout << test.getTagById("ilyennincs")->toHTML();
-	}
-	catch (HTML::IdNotFound e) {
-		cerr << e.message() << endl;
-	}
+	////IdNotFound Exeption tesztelése
+	//try {
+	//	cout << test.getTagById("ilyennincs")->toHTML();
+	//}
+	//catch (HTML::IdNotFound e) {
+	//	cerr << e.message() << endl;
+	//}
 	   
 	
 	
