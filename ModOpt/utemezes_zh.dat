@@ -1,0 +1,24 @@
+# A feladat során hengerfejek (termék) gyártásának adott "recept" szerinti optimális ütemezését kell meghatározni.
+
+# Az alapfeladatban kizárólag a hengerek öntésével foglalkozunk, azaz egy lépésbõl áll egy hengerfej legyártása.
+# Mivel minden hengerfej más és más ezért n darab különbözõ típusú terméknél (J1, J2 ... Jn) eltérõ ideig dolgozik rajta az öntöde. Ezek a munkafolyamatok jellemezhetõek azzal, hogy mennyi ideig tart végrehajtani õket.
+# Emellett adott m darab egyforma öntõkemence (M1, M2, ... Mm), amelyben párhuzamosan gyártahtóak a hengerfejek, de egy öntödében egyszerre csak 1 db!
+# A célunk a következõ: adott piaci igények alapján minél rövidebb összidõ alatt legyártani a termékekbõl az elvárt mennyiséget.
+
+# Adatok (amelyeket úgy vesztek fel ahogy akartok): 
+
+# Termékek: J1, J2, J3, J4, J5
+# Gyártandó mennyiség: J1 - 5 db, J2 - 8 db, J3 - 12 db, J4 - 1 db, J5 - 6 db
+# Gyártási idõ/db: J1 - 5, J2 - 12.45, J3 - 7, J4 - 20.1, J5 - 9.98
+# Öntödék száma: 2 (M1, M2)
+
+# Megajánlott 3-as szint: az öntödék nem egyformák, eltérõ idõ alatt képesek ugyanazt a feladatot végrehajtani, így ezt figyelembe kell venni.
+# További adatok:
+
+# Gyártási idõ öntödénként:
+# 	M1		M2
+# J1	5		9
+# J2	12.45	10.4
+# J3	7		3
+# J4	20.1	12
+# J5	9.98	5
